@@ -100,7 +100,7 @@
       var map = new mapboxgl.Map({
         container: 'map', // container id
         style: "mapbox://styles/mapbox/streets-v11", //YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
-        center: [-34.6308729, -58.4081976], // starting position [lng, lat]
+        center: [-58.4081976,-34.6308729], // starting position [lng, lat]
         zoom: 14, // starting zoom
         transformRequest: transformRequest
       });
@@ -131,7 +131,7 @@
 
           // create a variable for your popup and populate your popup with information from your table
           var popup = new mapboxgl.Popup()
-            .setHTML(`<h3>` + row.Where + `</h3>` + '<h4>' + '<b>' + 'What is this?: ' + '</b>' + row.Description + '</h4>'); // use the table to populate your popup with text
+            .setHTML(`<h3>` + row.Where + `</h3>` + '<h4>' + '<b>' + 'What is this?: ' + '</b><br/>' + row.Description + '</h4>'); // use the table to populate your popup with text
 
           // create a variable for your markup and add it to the map 
           var marker = new mapboxgl.Marker({
